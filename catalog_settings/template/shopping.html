@@ -1,0 +1,94 @@
+{% extends "main.html" %}
+{% block content %}
+{% load static %}
+
+    <section class="product-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 product-banner-heading">
+                    <h1>Product list</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="product-block">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-md-3">
+                    <div class="side-bar">
+                        <h2 class="m-3">Best selling</h2>
+                        {% for category in categories %}
+                        <div class="card m-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4 p-2 ">
+                                    <img src="/media/{{category.pic}}" class="card-img-top" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="product-rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </h5>
+                                        <p class="card-text title">{{category.name}}</p>
+                                        <!--p class="card-text price">
+                                        	<small class="text-body-secondary">$8.0</small>
+                                        </p-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor%}
+                    </div>
+                </div>
+
+
+                <div class="col-md-9 main-block p-0 m-0">
+                   {% for shopping in prd %}
+                    <div class="card m-3">
+                        <div class="row g-0 ">
+                            <div class="col-md-4 p-2">
+                                <img src="/media/{{ shopping.pic2 }}" class="img-fluid rounded-start" alt="{{shopping.name}}">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="product-rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </h5>
+                                    <p class="card-text title">{{shopping.name}}</p>
+                                    <p class="card-text price">
+                                    <strike style="font-size:20px">₹{{shopping.mrp}}</strike>
+                                     
+
+    
+                                    	<small class="text-body-secondary">₹{{ shopping.sellingprice }}</small></p>
+                                    <p class="product-bio">The act of putting into your mouth what the earth has grown
+                                        is perhaps your most
+                                        direct interaction with the earth.</p>
+                                        <!--a href="/ProductDetails/{{shopping.id}}">View Product</a-->
+                                    <!--a href="#" class="btn btn-primary">Add to cart</a-->
+                                    <form action="/cart/add/{{shopping.id}}" method="post">
+                                        {% csrf_token %}  
+                                        {{ cart_product_form }}
+                                        <input type="submit" value="Add to cart"  class="btn text-light bg-success" id="b1"><br>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   {% endfor%}
+
+                </div>
+            </div>
+            <!-- pagination -->
+        </div>
+    </section>
+
+
+{% endblock %}

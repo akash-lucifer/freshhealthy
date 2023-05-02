@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}
+    Your Shopping Cart| Thank you
+{% endblock %}
+
+{% block content %}
+	<div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Home/Order</h1>
+            <span>Order Placed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 6%">
+            <div class="col-md-8 col-md-offset-2">
+                <h3 class="page-header">Thank You For Shopping With Us
+                </h3>
+                <p>Your order has been successfully completed. Your order number is <strong>{{ orderid }}</strong>.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
