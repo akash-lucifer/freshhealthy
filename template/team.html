@@ -1,0 +1,153 @@
+{% extends "main.html" %}
+{% block content %}
+    {% load static %}
+   
+    <section class="team-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 team-banner-heading">
+                    <h1>Our Team</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="farmers">
+        <div class="container">
+            <div class="row farmer-block">
+                <div class="col-md-4">
+                    <div class="farmer-image">
+                        <img src="{% static '/images/team-2-1.jpg' %}" alt="farmer-image">
+                    </div>
+                    <div class="farmer-about">
+                        <div class="farmer-name">
+                            <h5>kevin martin</h5>
+                            <p><span>senior farmer</span></p>
+                            <div class="farmer-links">
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="farmer-image">
+                        <img src="{% static '/images/team-2-2.jpg' %}" alt="farmer-image">
+                    </div>
+                    <div class="farmer-about">
+                        <div class="farmer-name">
+                            <h5>Aleesha brown</h5>
+                            <p><span>senior farmer</span></p>
+                            <div class="farmer-links">
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="farmer-image">
+                        <img src="{% static '/images/team-2-3.jpg' %}" alt="farmer-image">
+                    </div>
+                    <div class="farmer-about">
+                        <div class="farmer-name">
+                            <h5>Mike hardson</h5>
+                            <p><span>senior farmer</span></p>
+                            <div class="farmer-links">
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-5 farmer-block">
+                <div class="col-md-4">
+                    <div class="farmer-image">
+                        <img src="{% static '/images/team-2-4.jpg' %}" alt="farmer-image">
+                    </div>
+                    <div class="farmer-about">
+                        <div class="farmer-name">
+                            <h5>Cristine Eve</h5>
+                            <p><span>senior farmer</span></p>
+                            <div class="farmer-links">
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="farmer-image">
+                        <img src="{% static '/images/team-2-5.jpg' %}" alt="farmer-image">
+                    </div>
+                    <div class="farmer-about">
+                        <div class="farmer-name">
+                            <h5>John smith</h5>
+                            <p><span>senior farmer</span></p>
+                            <div class="farmer-links">
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="farmer-image">
+                        <img src="{% static '/images/team-2-6.jpg' %}" alt="farmer-image">
+                    </div>
+                    <div class="farmer-about">
+                        <div class="farmer-name">
+                            <h5>Sarah Albert</h5>
+                            <p><span>senior farmer</span></p>
+                            <div class="farmer-links">
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="news-letter m-0 p-0">
+        <div class="row subscribe-box m-0 p-0">
+            <div class="col-md-12 d-flex">
+                <div class="col-md-6 px-5">
+                    <div class="icon-folder d-flex align-items-center">
+                        <i class="fa-brands fa-slack"></i>
+                        <h2>Subscribe our newsletter</h2>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="row g-2">
+                            <div class="col-md">
+                                <div class="form-floating d-flex">
+                                    <input type="email" class="form-control " id="floatingInputGrid"
+                                        placeholder="name@example.com" value="  ">
+                                    <label for="floatingInputGrid">Email address</label>
+                                    <button type="submit" class="sub-button"><i
+                                            class="fa-solid fa-paper-plane"></i></button>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+    {% endblock %}

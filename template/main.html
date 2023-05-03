@@ -23,14 +23,18 @@
 
 <body>
 
-  <div id="message" class="message">
+  <div id="message" class="success_message">
   
-   {% if request.session.error %}
-       {{ request.session.error_message }}
-   {% else %}
-      {{ request.session.success_message }}
-   {% endif %}
-   </div>
+    {% if request.session.error %}
+        <div class="alert alert-success w-50 align-middle position-absolute">
+        {{ request.session.error_message }}
+        </div>
+    {% else %}
+       <div class="alert alert-warning w-50 align-middle position-absolute">
+       {{ request.session.success_message }}
+     </div>
+    {% endif %}
+  </div>
   
    {% if request.session.userid %}
    {% include "after_header.html" %}

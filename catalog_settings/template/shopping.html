@@ -68,15 +68,13 @@
 
     
                                     	<small class="text-body-secondary">₹{{ shopping.sellingprice }}</small></p>
-                                    <p class="product-bio">The act of putting into your mouth what the earth has grown
-                                        is perhaps your most
-                                        direct interaction with the earth.</p>
+                                    <p class="product-bio">{{ shopping.description }}</p>
                                         <!--a href="/ProductDetails/{{shopping.id}}">View Product</a-->
                                     <!--a href="#" class="btn btn-primary">Add to cart</a-->
                                     <form action="/cart/add/{{shopping.id}}" method="post">
                                         {% csrf_token %}  
                                         {{ cart_product_form }}
-                                        <input type="submit" value="Add to cart"  class="btn text-light bg-success" id="b1"><br>
+                                        <input type="submit" value="Add to cart" style="background-color: #4A9E27;"  class="btn text-light" id="b1"><br>
                                     </form>
                                 </div>
                             </div>

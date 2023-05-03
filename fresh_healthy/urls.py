@@ -38,6 +38,10 @@ urlpatterns = [
     path('cart/add/<int:product_id>', cart.cart_add, name='cart_add'),
     path('cart/remove/<int:product_id>', cart.cart_remove, name='cart_remove'),
     path('cart/', cart.cart_detail, name='cart_detail'),
-    path('<str:url>',static_page_url.static_page_url,name="static_page_url"),
+   # path('<str:url>',static_page_url.static_page_url,name="static_page_url"),
     path('orders/', include('order.urls')),
+    path('testimonial',views.testimonial,name="testimonial"),
+    path('product',views.product,name="product"),
+    path('about',views.about,name="about"),
+    path('team',views.team,name="team"),
 ]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
