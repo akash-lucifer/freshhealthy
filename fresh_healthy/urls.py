@@ -34,6 +34,8 @@ urlpatterns = [
     path('contact',contact.contact,name="contact"),
     path('contact-user',contact.contactUser,name="contact-user"),
     path('catalog/<slug:url>',catalog.category_details,name="catalog"),
+    path('product/<slug:url>',catalog.product_details,name="catalog"),
+
     path('shopping/',catalog.shopping,name="shop"),
     path('cart/add/<int:product_id>', cart.cart_add, name='cart_add'),
     path('cart/remove/<int:product_id>', cart.cart_remove, name='cart_remove'),
