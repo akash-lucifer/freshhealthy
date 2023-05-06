@@ -31,7 +31,7 @@ def product_details(request, url):
 def shopping(request):
     prd=products.objects.all()
     categories = Category.objects.all()
-    paginator = Paginator(prd, 1)  # Show 25 contacts per page.
+    paginator = Paginator(prd, 2)  # Show 25 contacts per page.
 
     page_number = request.GET.get("page")
     page_obj = paginator.get_page(page_number)

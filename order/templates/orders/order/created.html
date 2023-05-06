@@ -1,27 +1,32 @@
 {% extends 'main.html' %}
 {% load static %}
 {% block title %}
-    Your Shopping Cart| Thank you
+Your Shopping Cart| Thank you
 {% endblock %}
 
 {% block content %}
-	<div class="page-heading header-text">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1>Home/Order</h1>
-            <span>Order Placed</span>
-          </div>
+<div class="page-heading header-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="h1">Order Placed</h1>
+        <div class="verify">
+          <img src="{% static '/images/verify.png' %}" alt="verify">
         </div>
       </div>
     </div>
-    <div class="container">
-        <div class="row" style="margin-top: 6%">
-            <div class="col-md-8 col-md-offset-2">
-                <h3 class="page-header">Thank You For Shopping With Us
-                </h3>
-                <p>Your order has been successfully completed. Your order number is <strong>{{ orderid }}</strong>.</p>
-            </div>
-        </div>
+  </div>
+</div>
+<div class="order-placed">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 order-id">
+        <h3 class="page-header">Thank You For Shopping With Us</h3>
+        <p>Your order has been successfully completed. Your order Number is <strong>{{ orderid }}</strong>.</p>
+        <a href="{% url 'shop' %}" class="btn btn-secondary my-2">Continue Shopping</a>
+
+      </div>
     </div>
+  </div>
+</div>
 {% endblock %}

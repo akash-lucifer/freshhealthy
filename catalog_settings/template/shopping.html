@@ -2,58 +2,30 @@
 {% block content %}
 {% load static %}
 
-    <section class="product-banner">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 product-banner-heading">
-                    <h1>Product list</h1>
-                </div>
+<section class="product-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 product-banner-heading">
+                <h1>Product list</h1>
             </div>
         </div>
-    </section>
-    <section class="product-block">
-        <div class="container">
-            <div class="row py-5">
-                <div class="col-md-3">
-                    <div class="side-bar">
-                        <h2 class="m-3">Best selling</h2>
-                        {% for category in categories %}
-                        <div class="card m-3" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="col-md-4 p-2 ">
-                                    <img src="/media/{{category.pic}}" class="card-img-top" alt="...">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="product-rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </h5>
-                                        <p class="card-text title">{{category.name}}</p>
-                                        <!--p class="card-text price">
-                                        	<small class="text-body-secondary">$8.0</small>
-                                        </p-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor%}
-                    </div>
-                </div>
-
-
-                <div class="col-md-9 main-block p-0 m-0">
-                   {% for shopping in prd %}
-                    <div class="card m-3">
-                        <div class="row g-0 ">
-                            <div class="col-md-4 p-2">
-                                <img src="/media/{{ shopping.pic2 }}" class="img-fluid rounded-start" alt="{{shopping.name}}">
+    </div>
+</section>
+<section class="product-block">
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-md-3">
+                <div class="side-bar">
+                    <h2 class="m-3">Best selling</h2>
+                    {% for category in categories %}
+                    <div class="card m-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4 p-2 ">
+                                <img src="/media/{{category.pic}}" class="card-img-top" alt="...">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
+                                    <p class="card-text title">{{category.name}}</p>
                                     <h5 class="product-rating">
                                         <i class="fa-solid fa-star"></i>
                                         <i class="fa-solid fa-star"></i>
@@ -61,50 +33,81 @@
                                         <i class="fa-solid fa-star"></i>
                                         <i class="fa-solid fa-star"></i>
                                     </h5>
-                                    <p class="card-text title"><a href="/product/{{ shopping.id }}">{{shopping.name}}</a></p>
-                                    <p class="card-text price">
-                                    <strike style="font-size:20px">₹{{shopping.mrp}}</strike>
-                                     
-
-    
-                                    	<small class="text-body-secondary">₹{{ shopping.sellingprice }}</small></p>
-                                    <p class="product-bio">{{ shopping.description }}</p>
-                                        <!--a href="/ProductDetails/{{shopping.id}}">View Product</a-->
-                                    <!--a href="#" class="btn btn-primary">Add to cart</a-->
-                                    <form action="/cart/add/{{shopping.id}}" method="post">
-                                        {% csrf_token %}  
-                                        {{ cart_product_form }}
-                                        <input type="submit" value="Add to cart" style="background-color: #4A9E27;"  class="btn text-light" id="b1"><br>
-                                    </form>
+                                    <!--p class="card-text price">
+                                        	<small class="text-body-secondary">$8.0</small>
+                                        </p-->
                                 </div>
                             </div>
                         </div>
                     </div>
-                   {% endfor%}
-                       
-
-                       <div class="pagination">
-                            <span class="step-links">
-                                {% if prd.has_previous %}
-                                    <a href="?page=1">&laquo; first</a>
-                                    <a href="?page={{ prd.previous_page_number }}">previous</a>
-                                {% endif %}
-
-                                <span class="current">
-                                    Page {{ prd.number }} of {{ prd.paginator.num_pages }}.
-                                </span>
-
-                                {% if prd.has_next %}
-                                    <a href="?page={{ prd.next_page_number }}">next</a>
-                                    <a href="?page={{ prd.paginator.num_pages }}">last &raquo;</a>
-                                {% endif %}
-                            </span>
-                        </div>
+                    {% endfor%}
                 </div>
             </div>
-            <!-- pagination -->
+
+
+            <div class="col-md-9 main-block p-0 m-0">
+                {% for shopping in prd %}
+                <div class="card m-3">
+                    <div class="row g-0 ">
+                        <div class="col-md-4 p-2">
+                            <img src="/media/{{ shopping.pic2 }}" class="img-fluid rounded-start"
+                                alt="{{shopping.name}}">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <p class="card-text title my-2"><a href="/product/{{ shopping.id }}"
+                                        style="color: #000;">{{shopping.name}}</a></p>
+                                <p class="card-text price">
+                                    <strike style="font-size:20px">₹{{shopping.mrp}}</strike>
+                                    <small class="text-body-secondary">₹{{ shopping.sellingprice }}</small>
+                                </p>
+                                <h5 class="product-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </h5>
+                                <p class="product-bio">{{ shopping.description }}</p>
+                                <!--a href="/ProductDetails/{{shopping.id}}">View Product</a-->
+                                <!--a href="#" class="btn btn-primary">Add to cart</a-->
+                                <form action="/cart/add/{{shopping.id}}" method="post">
+                                    {% csrf_token %}
+                                    {{ cart_product_form }}
+                                    <input type="submit" value="Add to cart" style="background-color: #4A9E27;"
+                                        class="btn text-light" id="b1"><br>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor%}
+
+                <div class="col-md-12 text-center">
+                    <div class="pagination d-flex justify-content-center  mb-2">
+                        <span class="page-item page-link-item d-flex gap-3 align-items-center">
+                            {% if prd.has_previous %}
+                            <a href="?page=1" class="page-link text-decoration-none" >&laquo; first</a>
+                            <a href="?page={{ prd.previous_page_number }}" class="page-link text-decoration-none" >previous</a>
+                            {% endif %}
+
+
+
+                            {% if prd.has_next %}
+                            <a href="?page={{ prd.next_page_number }}" class="page-link text-decoration-none" >next</a>
+                            <a href="?page={{ prd.paginator.num_pages }}" class="page-link text-decoration-none" >last &raquo;</a>
+                            {% endif %}
+                        </span>
+                    </div>
+                    <span class="current" class="page-link link">
+                        Page {{ prd.number }} of {{ prd.paginator.num_pages }}.
+                    </span>
+                </div>
+            </div>
         </div>
-    </section>
+        <!-- pagination -->
+    </div>
+</section>
 
 
 {% endblock %}

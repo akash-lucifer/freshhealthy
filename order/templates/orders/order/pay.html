@@ -15,7 +15,7 @@
 </div>
 </div> -->
 <div class="container">
-  <div class="row" style="margin-top: 6%;">
+  <div class="row mx-auto" >
 
     {% if error %}
     <h3>{{ error }}</h3>
@@ -34,7 +34,7 @@
           </li>
           {% endfor %}
 
-          <li class="list-group-item active" style="color:white; font-size:22px;background:black;">
+          <li class="list-group-item active">
             Total Cost: Rs. {{ cart.get_total_price }}</li>
         </ul>
 
@@ -43,7 +43,7 @@
         <input type="hidden" name="oid" value="{{ order.id }}">
         <input type="hidden" name="amount" value="{{ cart.get_total_price }}">
         <!-- <input type="submit" name="submit" value="PAY NOW" class="btn btn-success" required> -->
-        <button type="submit" name="submit" value="PAY NOW" class="btn btn-primary" required>Pay Now</button>
+        <button type="submit" name="submit" value="PAY NOW" class="btn btn-secondary mt-3" required>Pay Now</button>
         <br>
       </div>
     </form>
