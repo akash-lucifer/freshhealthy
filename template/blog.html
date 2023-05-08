@@ -1,0 +1,113 @@
+{% extends "main.html" %}
+{% block content %}
+{% load static %}
+
+<section class="blog-main">
+    <div class="container-fluid">
+        <div class="row blog">
+            <div class="col-md-8">
+                <div class="blog-image">
+                    <img src="{% static '/images/blog.jpg' %}" alt="">
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="blog-body">
+                            <div class="blog-detail">
+                                <h2>Which healthy food growth strategies required</h2>
+                                <p>Organic food has become increasingly popular in recent years as more people are
+                                    becoming aware of the benefits of consuming food that is free of synthetic
+                                    chemicals
+                                    and additives. Organic food refers to food that is produced using
+                                    environmentally
+                                    and animal-friendly farming practices without the use of synthetic pesticides,
+                                    herbicides, fertilizers, or genetically modified organisms (GMOs). In this blog,
+                                    we
+                                    will explore the benefits of organic food and why you should consider
+                                    incorporating
+                                    it into your diet.</p>
+                                <p>Benefits of Organic Food:</p>
+                                <p> Organic food is free of harmful chemicals - One of the main advantages of
+                                    organic
+                                    food is that it is free of synthetic pesticides and fertilizers that can be
+                                    harmful
+                                    to our health. Studies have shown that exposure to these chemicals can cause a
+                                    range
+                                    of health problems, including cancer, developmental delays, and reproductive
+                                    issues.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 mt-5">
+                                    <h2>Comment's</h2>
+                                    <div class="comment">
+                                        <div class="comment-image">
+                                            <img src="{% static '/images/testimonial-2-3.jpg' %}" alt="">
+                                        </div>
+                                        <div class="comment-detail">
+                                            <h5>kevin martin</h5>
+                                            <p>Wow, your food blog is absolutely mouth-watering! From the stunning
+                                                photography to the delicious-sounding recipes, I am already feeling
+                                                inspired to head straight to the kitchen and whip up some of your
+                                                dishes.</p>
+                                        </div>
+                                    </div>
+                                    <div class="comment">
+                                        <div class="comment-image">
+                                            <img src="{% static '/images/testimonial-2-6.jpg' %}" alt="">
+                                        </div>
+                                        <div class="comment-detail">
+                                            <h5>Aleesha brown</h5>
+                                            <p>Wow, your food blog is absolutely mouth-watering! From the stunning
+                                                photography to the delicious-sounding recipes, I am already feeling
+                                                inspired to head straight to the kitchen and whip up some of your
+                                                dishes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <form class="blog-form">
+                                <h2>leave a Comment</h2>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Your Name" name="name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="Mail" class="form-control" placeholder="Your Email"
+                                            name="name">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <textarea class="form-control" placeholder="Write a comment..."
+                                            name="Message" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-secondary mt-4">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 ">
+                <div class="latest-blog">
+                    <h5>latest posts</h5>
+                    <div class="blog_upcomig">
+                        <img src="{% static '/images/lp-1-1.jpg' %}" alt="">
+                        <p>There are many variations of...</p>
+                    </div>
+                    <div class="blog_upcomig">
+                        <img src="{% static '/images/lp-1-2.jpg' %}" alt="">
+                        <p>Agriculture miracle you dont know..</p>
+                    </div>
+                    <div class="blog_upcomig">
+                        <img src="{% static '/images/lp-1-3.jpg' %}" alt="">
+                        <p>bring to the table win-win survival</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

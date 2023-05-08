@@ -28,17 +28,17 @@ body {font-family: 'Quicksand', sans-serif;;color: #787878;font-size: 15px;line-
 .card label{display: none;}
 
 
-    
+
 .text-dark{font-size: 20px !important;color: #153b03 !important;font-weight: 800 !important;}
 .light-heading{font-size: 23px;font-family: cursive;font-style: italic;color: #4A9E27;}
 .h-m{font-style: italic;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
     
 .h1{font-size: 55px !important; color: #153b03 !important;font-weight: 700 !important;text-align: center;padding: 30px 0px;}
-/* signup */
+/* ------------------------------------------------registration ------------------------------------------------ */
 
 .banner-sign-up{background: url(../images/testimonialbg1.jpg)center/cover;height: 642px;}
 .wrapper{position: relative;max-width: 430px;width: 100%;background: #fff; padding: 34px; border-radius: 6px;
-  box-shadow: 0 5px 10px #00000033;right: -30rem;top: 5rem;background: transparent;backdrop-filter: blur(10px);}
+  box-shadow: 0 5px 10px #00000033;right: -30rem;top: 1rem;background: transparent;backdrop-filter: blur(10px);}
 .wrapper h2{position: relative;font-size: 22px;font-weight: 600;color: #333;}
 .wrapper h2::before{content: '';position: absolute;left: 0;bottom: 0;height: 3px;width: 28px;border-radius: 12px;background: #4070f4;}
 .wrapper form{margin-top: 30px;}
@@ -48,22 +48,28 @@ form .input-box input{height: 100%;width: 100%;outline: none;padding: 0 15px;fon
 .input-box input:focus,.input-box input:valid{border-color: #4A9E27;}
 form .policy{display: flex;align-items: center;}
 form h3{color: #707070;font-size: 14px;font-weight: 500;margin-left: 10px;}
-.input-box.button input{color: #fff;letter-spacing: 1px;border: none;background: #2b7e0500;cursor: pointer;color: #000000;}
+.input-box.button input{color: #fff;font-size: 18px; letter-spacing: 1px;border: 1px solid #0000000f;background: #2b7e0500;cursor: pointer;color: #000000;}
 .input-box.button input:hover{background: #4A9E27;color: #fff;}
 form .text h3{color: #333;width: 100%;text-align: center;}
 form .text h3 a{color: #4070f4;text-decoration: none;}
 form .text h3 a:hover{text-decoration: underline !important;}
-
+.block_title h5{font-size: 15px;}
+.match-inputs{font-size: 10px;display: flex;flex-wrap: wrap;line-height: 5px;gap: 5px;}
+.match-inputs .invalid{color: #e70303;}
+.match-inputs .valid{color: #40e100;}
+.match-inputs .valid::before{content: "\f00c";font-family: FontAwesome;font-size: 10px;color: #40e100;}
+.valid_info_empty_none{display: none !important;}
+  
 
 /* signup end */
 
 
 
-/* login */
+/* -------------------------------------------------------------login ---------------------------------------------*/
 
 .login{background: url(../images/testimonialbg1.jpg)center/cover;height: 642px;}
 
-.login form {height: 450px;width: 400px;background: transparent; position: absolute;transform: translate(-50%, -50%);top: 50%;
+.login form {height: 450px;width: 400px;background: transparent; position: absolute;transform: translate(-50%, -50%);top: 60%;
   left: 50%;border-radius: 10px;  backdrop-filter: blur(10px);border: 2px solid #0000001a;box-shadow: 0 5px 10px #00000033;
   padding: 50px 35px;}
 
@@ -78,7 +84,7 @@ form .text h3 a:hover{text-decoration: underline !important;}
 
 .login ::placeholder {color: #000000;}
 
-.login button {margin-top: 50px;width: 100%;background-color: #ffffff00;color: #080710;padding: 15px 0;font-size: 18px;font-weight: 500;
+.login button {margin-top: 50px;width: 100%;border: 1px solid #00000015; background-color: #ffffff00;color: #080710;padding: 15px 0;font-size: 18px;font-weight: 500;
   border-radius: 5px;cursor: pointer;}
 .login form .input-box{height: 52px;margin: 18px 0;}
 
@@ -117,7 +123,72 @@ form .text h3 a:hover{text-decoration: underline !important;}
 .service .discover-more h3{font-size: 27px;color: #153b03;font-weight: 600;}
 .service .discover-more img{width: 15%;padding: 10px;}
 .service .service-btn{padding: 0px 30px;} 
+.slider-image{
+  animation-name: myAnim;
+  animation-duration: 2s;
+  animation-direction: alternate;
+}
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
 
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.slider-button{
+  animation-name: mybtn;
+  animation-duration: 2s;
+  animation-direction: alternate;
+}
+@keyframes mybtn {
+  0% {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.service-img {
+
+  width: 100%;
+}
+
+.animatable {visibility: hidden;}
+.animated{ visibility: visible;}
+.animated.fadeinleft{animation-name: bounceInLeft; animation-duration: 1s;}
+.animated.fadeinright{animation-name: right; animation-duration: 1s;}
+
+
+@keyframes bounceInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }  
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes right {
+  0% {
+      opacity: 0;
+      transform: translateX(300px);
+  }  
+  
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
 /* categorie */
 .categorie .heading {text-align: center;margin: 0 15rem;}
 .categorie .heading p{font-size: 23px;font-family: cursive;font-style: italic;color: #4A9E27;}
@@ -167,8 +238,8 @@ form .text h3 a:hover{text-decoration: underline !important;}
 .our-team-block .team-heading{text-align: center;}
 .our-team-block .team-heading h2{color: #153b03;font-size: 40px;font-weight: 700;padding-bottom: 15px;}
 .our-team-block .our-team{margin: 5rem 0rem;justify-content: center;gap: 5rem;}
-.our-team-block .our-team .col-md-4{width: 28%;cursor: pointer; background: #153b03;position: relative;border-top-right-radius: 120px;border-top-left-radius: 120px;}
-.our-team-block .our-team .col-md-4:hover{background: #2c7e05;transition:.8s;transition-timing-function: ease-in-out;}
+.our-team-block .our-team .col-md-4{width: 28%;cursor: pointer;transition:.7s; background: #153b03;position: relative;border-top-right-radius: 120px;border-top-left-radius: 120px;}
+.our-team-block .our-team .col-md-4:hover{background: #2c7e05;transition:.6s;}
 .our-team-block .our-team .col-md-4 .team-img{width: 15rem;margin: 0 auto;}
 .our-team-block .our-team .col-md-4 .team-img img{width: 100%;margin-top: -80px;}
 .our-team-block .our-team .col-md-4 .team-social-links{display: flex;flex-direction: column;position: absolute;bottom: 20px; ;font-size: 18px;gap: 20px;}
@@ -233,7 +304,7 @@ form .text h3 a:hover{text-decoration: underline !important;}
 .footer-block .col-md-3 h4{font-size: 22px !important; font-weight: 600 !important;color: #fff;}
 .footer-block .links ul{margin: 0;margin-left: 4rem; padding: 0;}
 .footer-block .links ul li {list-style: none !important;}
-.footer-block .links ul li a{color: #ffffff76;text-decoration: none;word-spacing: 3px;}
+.footer-block .links ul li a{color: #ffffff76;text-decoration: none;word-spacing: 3px;text-transform: uppercase;}
 .footer-block .links ul li a:hover{color: #fff;}
 .footer-block h6{position: relative;}
 .footer-block .col-md-3 .contact span{color:#ffffffda;}
@@ -321,8 +392,8 @@ form .text h3 a:hover{text-decoration: underline !important;}
 .farmers .heading h1{font-size: 40px;font-weight: 600;}
 .farmers .farmer-block .col-md-4 .farmer-image img{width: 80%;border: 10px solid #4b9e27e8;padding: 10px; border-radius: 50%;}
 .farmers .farmer-block .col-md-4 {text-align: center;}
-.farmers .farmer-block .col-md-4 .farmer-about{background: #206002;padding: 2rem 0rem;margin-top: 1rem;}
-.farmers .farmer-block .col-md-4 .farmer-about:hover{background:#4A9E27;transition: .3s;}
+.farmers .farmer-block .col-md-4 .farmer-about{background: #206002;padding: 2rem 0rem;margin-top: 1rem;transition: .5s;}
+.farmers .farmer-block .col-md-4 .farmer-about:hover{background:#4A9E27;transition: .5s;}
 .farmers .farmer-block .col-md-4 .farmer-about .farmer-name h5{font-size: 25px;color: #fff;}
 .farmers .farmer-block .col-md-4 .farmer-about .farmer-name span{text-transform: uppercase;font-size: 12px;}
 .farmers .farmer-block .col-md-4 .farmer-about:hover span{color: #fff;transition: .3s;}
@@ -434,8 +505,47 @@ form .text h3 a:hover{text-decoration: underline !important;}
 .view-more .product-img{width: 100%;}
 .view-more .product-img img{width: 100%;}
 
+/* -------------------------------------------------------Blog page --------------------------------------------- */
+.blog-main{margin: 2rem 0rem;}
+.blog-main .row{--bs-gutter-x:none;justify-content: center; }
+.blog-main .blog{gap: 2rem;}
+.blog-main .col-md-8 .blog-image{width: 100%;}
+.blog-main .col-md-8 .blog-image img{width: 100%;}
+.blog-main .col-md-8 .blog-body .blog-detail{font-size: 17px;border-bottom: 1px solid #ddd;}
+.blog-main .col-md-8 .blog-body .blog-detail h2{font-size: 25px;color: #153b03;margin: 1rem 0rem;font-weight: 700;}
+.blog-main .col-md-8 .blog-body .col-md-12 h2{font-size: 32px;color: #153b03;}
+.blog-main .col-md-8 .blog-body .comment{display: flex;justify-content: space-between;gap: 2rem;padding: 2rem 0rem;border-bottom: 1px solid #ddd;}
+.blog-main .col-md-8 .blog-body .comment .comment-image{width:25%;}
+.blog-main .col-md-8 .blog-body .comment .comment-image img{width: 100%;border-radius: 50%;}
+.blog-main .col-md-8 .blog-body .comment .comment-detail{margin-bottom: 2rem;}
+.blog-main .col-md-8 .blog-body form{margin: 2rem 0rem;}
+.blog-main .col-md-8 .blog-body form h2{font-size: 32px;color: #153b03;margin-bottom: 15px;}
+.blog-main .col-md-8 .blog-body form input{background: #F3F3ED;width: 95%;border: none;font-size: 15px;padding: 15px 25px;margin-bottom: 1rem;}
+.blog-main .col-md-8 .blog-body form textarea{background: #F3F3ED;width: 98%;border: none;padding: 15px 25px;font-size: 15px;max-height: 150px;}
+.blog-main .col-md-8 .blog-body form .btn{padding: 10px 50px !important;}
+.blog-main .col-md-3 .latest-blog{background: #dddddd3a;padding: 30px 20px;}
+.blog-main .col-md-3 .latest-blog h5{color: #153b03;font-size: 20px;font-weight: 600;}
+.blog-main .col-md-3 .blog_upcomig{display: flex; gap: 1rem;padding: 10px 5px; margin: 2rem 0rem;transition: .2s;}
+.blog-main .col-md-3 .blog_upcomig:hover{background: #ffffffe5;box-shadow: 0 2px 6px #00000026;transition: .2s;border-radius: 5px;}
 
 
+/* -----------------------------------------------------Terms & conditions --------------------------------*/
+.terms-banner{background: url(../images/terms.jpg)center/cover;height: 300px; box-shadow: inset 0px 0px 0px 500px #1b220075;}
+.terms-heading h1{font-size: 40px;padding: 6rem 0rem; color: #ffffff;text-transform: capitalize;font-weight: 700;text-align: center;}
+
+
+.terms-conditons{margin: 3rem 4rem;padding: 20px 0px; border: 1px solid #ddd;background: #b7eaa817;font-size: 13px;}
+.terms-conditons h2{font-size: 25px;color: #153b03;}
+.terms-conditons h4{font-size: 15px;color: #153b03;}
+
+/* ------------------------------------------------------privacy policy --------------------------------------*/
+.privacy-policy-banner{background: url(../images/privacy.jpg)center/cover;height: 300px; box-shadow: inset 0px 0px 0px 500px #1b220075;}
+.privacy-policy-heading h1{font-size: 40px;padding: 6rem 0rem; color: #ffffff;text-transform: capitalize;font-weight: 700;text-align: center;}
+
+
+.privacy-policy{margin: 3rem 4rem;padding: 20px 0px; border: 1px solid #ddd;background: #b7eaa817;font-size: 13px;}
+.privacy-policy h2{font-size: 25px;color: #153b03;}
+.privacy-policy h4{font-size: 15px;color: #153b03;}
 
 
 /* ------------------------------------------------Responsive---------------------------------------------- */
@@ -448,13 +558,13 @@ form .text h3 a:hover{text-decoration: underline !important;}
 
   /* header */
   
-  .header-block{position: relative;gap: 22rem;}
-  .header-block .navbar-toggler{position: absolute;left: 8rem;}
+  .header-block{position: relative;}
+  .header-block .navbar-toggler{position: absolute;right:10px;}
   /* banner */
   .banner-heading{top: 18%;left: 7%;}
   /* service */
-  .service .service-img{width: 100%;}
-  .service .service-heading{width: 100%;}
+  /* .service .service-img{width: 100%;} */
+  /* .service .service-heading{width: 100%;} */
   
   /* categorie  */
   .categorie .heading{margin: 0;}
@@ -515,6 +625,16 @@ form .text h3 a:hover{text-decoration: underline !important;}
 .product-block .col-md-3{width: 100%;}
 .product-block .side-bar .card{max-width: 100% !important;}
 .product-block .side-bar .row{background: #ffffff0a;}
+
+/* navbar */
+#navbarNavDropdown {background:#fff;width:250px;gap:10px !important;position:absolute;top:85%;z-index:10;right:10px;box-shadow: 0 2px 6px #00000026;}
+#navbarNavDropdown .navbar-nav {width:100%;gap:0rem;}
+#navbarNavDropdown .navbar-nav li a {padding: 8px 15px;
+border-bottom: 1px solid #ddd;font-size:13px;font-weight:600;}
+.login-buttons{width:100%;}
+.navigation .login-buttons {justify-content: center;gap:10px;padding-bottom:13px;margin-top: 10px;}
+.navigation .login-buttons .shop-now {border-radius:5px;padding:10px 30px;line-height:initial;font-size:13px;font-weight:bold;}
+
 
 
 

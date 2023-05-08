@@ -1,307 +1,371 @@
 {% extends "main.html" %}
 {% block content %}
-    {% load static %}
-    <section class="for-banner">
-        <div class="banner">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">  
-                        <img src="{% static '/images/home-banner.jpg' %}" class="d-block w-100" alt="...">
-                        <div class="banner-heading">
-                            <h1 class="h1">Choose the<br> healthy food</h1>
-                            <a href="{% url 'about' %}" class="btn btn-primary">learn more</a>
-                            <a href="{% url 'shop' %}" class="btn btn-secondary">shop now</a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{% static '/images/banner_2.jpg' %}" class="d-block w-100" alt="...">
-                        <div class="banner-heading-2">
-                            <h1 class="h1">Select the<br> organic products</h1>
-                            <a href="{% url 'about' %}" class="btn btn-primary">learn more</a>
-                            <a href="{% url 'shop' %}" class="btn btn-secondary">shop now</a>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{% static '/images/banner_3.jpg' %}" class="d-block w-100" alt="...">
-                        <div class="banner-heading">
-                            <h1 class="h1">From nature<br> to your table</h1>
-                            <a href="{% url 'about' %}" class="btn btn-primary">learn more</a>
-                            <a href="{% url 'shop' %}" class="btn btn-secondary">shop now</a>
-                        </div>
+{% load static %}
+<section class="for-banner">
+    <div class="banner">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static '/images/home-banner.jpg' %}" class="d-block w-100" alt="...">
+                    <div class="banner-heading">
+                        <h1 class="h1 slider-image">Choose the<br> healthy food</h1>
+                        <a href="{% url 'about' %}" class="btn btn-primary slider-button">learn more</a>
+                        <a href="{% url 'shop' %}" class="btn btn-secondary slider-button">shop now</a>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <div class="carousel-item">
+                    <img src="{% static '/images/banner_2.jpg' %}" class="d-block w-100" alt="...">
+                    <div class="banner-heading-2">
+                        <h1 class="h1 ">Select the<br> organic products</h1>
+                        <a href="{% url 'about' %}" class="btn btn-primary">learn more</a>
+                        <a href="{% url 'shop' %}" class="btn btn-secondary">shop now</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static '/images/banner_3.jpg' %}" class="d-block w-100" alt="...">
+                    <div class="banner-heading">
+                        <h1 class="h1 ">From nature<br> to your table</h1>
+                        <a href="{% url 'about' %}" class="btn btn-primary ">learn more</a>
+                        <a href="{% url 'shop' %}" class="btn btn-secondary">shop now</a>
+                    </div>
+                </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="for-service">
-        <div class="service">
-            <div class="container">
-                <div class="row py-5">
-                    <div class="col-md-6 service-img">
+<section class="for-service">
+    <div class="service">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-md-6 ">
+                    <div class="service-img animatable fadeinleft">
+
                         <img src="{% static '/images/service.png' %}" alt="service">
                     </div>
-                    <div class="col-md-6 service-heading">
-                        <h1>Organic & health fresh <br>food provider</h1>
-                        <div class="row">
-                            <div class="col-sm-6 mb-3 mb-sm-0">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <p class="card-text service-icon-check"> The natural products</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <p class="card-text service-icon-check"> Everyday fresh food</p>
-                                    </div>
+                </div>
+                <div class="col-md-6 service-heading animatable fadeinright">
+                    <h1>Organic & health fresh <br>food provider</h1>
+                    <div class="row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="card-text service-icon-check"> The natural products</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="service-heading-2">
-                            <h2>Healthy & Fresh- India's Leading Brand for Organic Food</h2>
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="card-text service-icon-check"> Everyday fresh food</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="discover-more">
-                            <img src="{% static '/images/salad.png' %}" alt="salad-image">
-                            <h3> Every day fresh and quality food for you</h3>
-                        </div>
-                        <div class="service-btn">
-                            <a href="{% url 'shop' %}" class="btn btn-secondary">Discover more</a>
-                        </div>
+                    </div>
+                    <div class="service-heading-2">
+                        <h2>Healthy & Fresh- India's Leading Brand for Organic Food</h2>
+                    </div>
+                    <div class="discover-more">
+                        <img src="{% static '/images/salad.png' %}" alt="salad-image">
+                        <h3> Every day fresh and quality food for you</h3>
+                    </div>
+                    <div class="service-btn">
+                        <a href="{% url 'shop' %}" class="btn btn-secondary">Discover more</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    {% if request.session.userid %}
-    <section class="categorie_block p-5" id="categorie-section">
-        <div class="categorie">
-            <div class="container">
-                <div class="row heading">
-                    <div class="col-md-12">
-                        <h3 class="light-heading">Our Categories</h3>
-                        <h2>what we're offering to customers</h2>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    
-                    
-                     {% for category in categories %}
-                      <div class="col-md-3">
-                        <div class="card">
-                            <img src="media/{{category.pic}}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">{{category.name}}</h5>
-                                <p class="card-text">{{category.description}}</p>
-                            </div>
-                            <a href="catalog/{{category.url}}" class="swipe-more arrow-1"><i class="fa-solid fa-arrow-right-long"></i></a>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-                <div class="row py-5 categorie-card">
-                    <div class="col-md-6 catergorie-card-image1">
-                        <h6>100% organic</h6>
-                        <h2>quality organic <br> food store</h2>
-                        <div class="categories-card-button">
-                            <a href="{% url 'shop' %}" class="btn btn-secondary">shop now</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 catergorie-card-image2">
-                        <h6>100% organic</h6>
-                        <h2>healthy products <br> everyday</h2>
-                        <div class="categories-card-button">
-                            <a href="{% url 'shop' %}" class="btn btn-secondary">shop now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-   
-    <section class="hot-product">
+    </div>
+</section>
+{% if request.session.userid %}
+<section class="categorie_block p-5" id="categorie-section">
+    <div class="categorie">
         <div class="container">
             <div class="row heading">
                 <div class="col-md-12">
-                    <h3 class="light-heading">Checkout new products</h3>
-                    <h2>Today's new hotest products available now</h2>
+                    <h3 class="light-heading">Our Categories</h3>
+                    <h2>what we're offering to customers</h2>
                 </div>
             </div>
-            <div class="row product-list " id="rotate">
-                {% for shopping in products %}
-                <div class="col-md-3 col-lg-3">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+
+                {% for category in categories %}
+                <div class="col-md-3">
                     <div class="card">
-                        <img src="/media/{{ shopping.pic2 }}" class="card-img-top" alt="...">
+                        <img src="media/{{category.pic}}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{shopping.name}}</h5>
-                            <p class="card-text ">₹{{shopping.mrp}}</p>
-                            <form action="/cart/add/{{shopping.id}}" method="post">
-                                {% csrf_token %}  
-                                <input type="hidden" name="quantity" value="1">
-                                <input type="submit" value="Add to cart"  class="btn btn-primary" id="b1"><br>
-                            </form>
+                            <h5 class="card-title">{{category.name}}</h5>
+                            <p class="card-text">{{category.description}}</p>
                         </div>
+                        <a href="catalog/{{category.url}}" class="swipe-more arrow-1"><i
+                                class="fa-solid fa-arrow-right-long"></i></a>
                     </div>
                 </div>
-                {% endfor%}
+                {% endfor %}
+            </div>
+            <div class="row py-5 categorie-card">
+                <div class="col-md-6 catergorie-card-image1 animated fadeinleft">
+                    <h6>100% organic</h6>
+                    <h2>quality organic <br> food store</h2>
+                    <div class="categories-card-button">
+                        <a href="{% url 'shop' %}" class="btn btn-secondary">shop now</a>
+                    </div>
+                </div>
+                <div class="col-md-6 catergorie-card-image2 animated fadeinright">
+                    <h6>100% organic</h6>
+                    <h2>healthy products <br> everyday</h2>
+                    <div class="categories-card-button">
+                        <a href="{% url 'shop' %}" class="btn btn-secondary">shop now</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-    {% endif %}
-    <section class="why_choose_us">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3 class="light-heading">why choose us</h3>
-                    <h2>Few resons for people choosing us</h2>
-                    <div class="col-md-12 pt-3">
-                        <div class="row row-cols-1 row-cols-md-2 g-3">
-                            <div class="col">
-                                <div class="card">
-                                    <img src="{% static '/images/why choose us icon-1.png' %}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Organic Products</h5>
-                                        <h4>It's grown by nature and served by nature.</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card">
-                                    <img src="{% static '/images/why choose us icon-2.png' %}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Organic fruit</h5>
-                                        <h4>Pure goodness from the land</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card">
-                                    <img src="{% static '/images/why choose us icon-3.png' %}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Daily fresh</h5>
-                                        <h4>Eat Green. Be Healthy</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card">
-                                    <img src="{% static '/images/why choose us icon-4.png' %}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Natural items</h5>
-                                        <h4>Health and cheerfulness naturally beget each other</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    </div>
+</section>
 
+<section class="hot-product">
+    <div class="container">
+        <div class="row heading">
+            <div class="col-md-12">
+                <h3 class="light-heading">Checkout new products</h3>
+                <h2>Today's new hotest products available now</h2>
             </div>
         </div>
-    </section>
+        <div class="row product-list " id="rotate">
+            {% for shopping in products %}
+            <div class="col-md-3 col-lg-3">
+                <div class="card">
+                    <img src="/media/{{ shopping.pic2 }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{shopping.name}}</h5>
+                        <p class="card-text ">₹{{shopping.mrp}}</p>
+                        <form action="/cart/add/{{shopping.id}}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="quantity" value="1">
+                            <input type="submit" value="Add to cart" class="btn btn-primary" id="b1"><br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% endfor%}
+        </div>
+    </div>
+</section>
+{% endif %}
+<section class="why_choose_us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="light-heading">why choose us</h3>
+                <h2>Few resons for people choosing us</h2>
+                <div class="col-md-12 pt-3">
+                    <div class="row row-cols-1 row-cols-md-2 g-3">
+                        <div class="col">
+                            <div class="card">
+                                <img src="{% static '/images/why choose us icon-1.png' %}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Organic Products</h5>
+                                    <h4>It's grown by nature and served by nature.</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="{% static '/images/why choose us icon-2.png' %}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Organic fruit</h5>
+                                    <h4>Pure goodness from the land</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="{% static '/images/why choose us icon-3.png' %}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Daily fresh</h5>
+                                    <h4>Eat Green. Be Healthy</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="{% static '/images/why choose us icon-4.png' %}" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Natural items</h5>
+                                    <h4>Health and cheerfulness naturally beget each other</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <section class="testimonial">
-        <div class="container">
-            <div class="row pt-5 ">
-                <div class="col-md-6">
-                    <div class="testimonial-heading">
-                        <h4 class="light-heading pb-3">Our Feedbacks</h4>
-                        <h2>what they're talking about our  company?</h2>
-                    </div>
-                    <div class="testimonial-about">
-                        <p class="pt-3 ">our takeout just went through the roof because  we could be
-                            taking five orders at one time, instead  of just one order at a time.</p>
-                    </div>
-                    <a href="{% url 'testimonial' %}"  class="btn btn-secondary">View All Testimonial</a>
-                </div>
-                <div class="col-md-6">
-                    <div class="tesitimonial-side-image">
-                        <img src="{% static '/images/testimonial-1-2.jpg' %}" alt="">
-                    </div>
-                </div>
-                <div class="row feedback">
-                    <div class="feedback-1 col-md-3">
-                        <i class="fa-solid fa-quote-right"></i>
-                        <p class="pt-4"><span>Delivery is Awesome and also a food quality made my day with fresh organic
-                                food Felt really good to pick up healthy stuff.</span></p>
-                        <div class="client-image d-flex align-items-center">
-                            <img src="{% static '/images/testimonial-client-1-1.jpg' %}" alt="client-image">
-                            <h6>aleesha rana</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="news-letter m-0 p-0">
-        <div class="container">
-            <div class="row pt-5">
-                <div class="col-md-12 news-heading">
-                    <h4 class="light-heading">from the blog posts</h4>
-                    <h2>latest news updates <br> & articles</h2>
+<section class="our-team-block">
+    <div class="container">
+        <div class="row team-heading">
+            <div class="col-md-12">
+                <h4 class="light-heading">Meet the Farmers</h4>
+                <h2>Awesome Farmers team<br> here to help you</h2>
+            </div>
+        </div>
+        <div class="row our-team">
+            <div class="col-md-4">
+                <div class="team-img">
+                    <img src="{% static '/images/team-1-1.png' %}" alt="team-1">
+                </div>
+                <div class="team-name">
+                    <h5>kevin martin</h5>
+                    <p><span>senior farmer</span></p>
+                </div>
+                <div class="team-social-links">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/jaspreet_dehar/" ><i
+                            class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="row news-block">
-                <div class="col-md-4 news-about-block">
-                    <div class="news-images">
-                        <img src="{% static '/images/news-1-1.jpg' %}" alt="">
-                    </div>
-                    <div class="news-about">
-                        <div class="news-about-icon">
-                            <p><span><i class="fa-solid fa-tag"></i> Apartment</span></p>
-                            <p><span><i class="fa-regular fa-user admin"></i> by Admin</span></p>
-                        </div>
-                        <h3>which healthy food growth strategies required</h3>
-                        <div class="read-more py-2">
-                            <a href="#" class="text-secondary ">Read More</a>
-                        </div>
-                    </div>
+            <div class="col-md-4">
+                <div class="team-img">
+                    <img src="{% static '/images/team-1-2.png' %}" alt="team-1">
                 </div>
-                <div class="col-md-4 news-about-block">
-                    <div class="news-images">
-                        <img src="{% static '/images/news-1-2.jpg' %}" alt="">
-                    </div>
-                    <div class="news-about">
-                        <div class="news-about-icon">
-                            <p><span><i class="fa-solid fa-tag"></i> Apartment</span></p>
-                            <p><span><i class="fa-regular fa-user admin"></i> by Admin</span></p>
-                        </div>
-                        <h3>which healthy food growth strategies required</h3>
-                        <div class="read-more py-2">
-                            <a href="#" class="text-secondary ">Read More</a>
-                        </div>
-                    </div>
+                <div class="team-name">
+                    <h5>allesha brown</h5>
+                    <p><span>senior farmer</span></p>
                 </div>
-                <div class="col-md-4 news-about-block">
-                    <div class="news-images">
-                        <img src="{% static '/images/news-1-3.jpg' %}" alt="">
-                    </div>
-                    <div class="news-about">
-                        <div class="news-about-icon">
-                            <p><span><i class="fa-solid fa-tag"></i> Apartment</span></p>
-                            <p><span><i class="fa-regular fa-user admin"></i> by Admin</span></p>
-                        </div>
-                        <h3>which healthy food growth strategies required</h3>
-                        <div class="read-more py-2">
-                            <a href="#" class="text-secondary ">Read More</a>
-                        </div>
+                <div class="team-social-links">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-img">
+                    <img src="{% static '/images/team-1-3.png' %}" alt="team-1">
+                </div>
+                <div class="team-name">
+                    <h5>mike hardson</h5>
+                    <p><span>senior farmer</span></p>
+                </div>
+                <div class="team-social-links">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonial">
+    <div class="container">
+        <div class="row pt-5 ">
+            <div class="col-md-6">
+                <div class="testimonial-heading">
+                    <h4 class="light-heading pb-3">Our Feedbacks</h4>
+                    <h2>what they're talking about our company?</h2>
+                </div>
+                <div class="testimonial-about">
+                    <p class="pt-3 ">our takeout just went through the roof because we could be
+                        taking five orders at one time, instead of just one order at a time.</p>
+                </div>
+                <a href="{% url 'testimonial' %}" class="btn btn-secondary">View All Testimonial</a>
+            </div>
+            <div class="col-md-6">
+                <div class="tesitimonial-side-image">
+                    <img src="{% static '/images/testimonial-1-2.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="row feedback">
+                <div class="feedback-1 col-md-3">
+                    <i class="fa-solid fa-quote-right"></i>
+                    <p class="pt-4"><span>Delivery is Awesome and also a food quality made my day with fresh organic
+                            food Felt really good to pick up healthy stuff.</span></p>
+                    <div class="client-image d-flex align-items-center">
+                        <img src="{% static '/images/testimonial-client-1-1.jpg' %}" alt="client-image">
+                        <h6>aleesha rana</h6>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <div class="row subscribe-box m-0 p-0">
+    </div>
+</section>
+
+<section class="news-letter m-0 p-0">
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-md-12 news-heading">
+                <h4 class="light-heading">from the blog posts</h4>
+                <h2>latest news updates <br> & articles</h2>
+            </div>
+        </div>
+        <div class="row news-block">
+            <div class="col-md-4 news-about-block">
+                <div class="news-images">
+                    <img src="{% static '/images/news-1-1.jpg' %}" alt="">
+                </div>
+                <div class="news-about">
+                    <div class="news-about-icon">
+                        <p><span><i class="fa-solid fa-tag"></i> Apartment</span></p>
+                        <p><span><i class="fa-regular fa-user admin"></i> by Admin</span></p>
+                    </div>
+                    <h3>which healthy food growth strategies required</h3>
+                    <div class="read-more py-2">
+                        <a href="#" class="text-secondary ">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 news-about-block">
+                <div class="news-images">
+                    <img src="{% static '/images/news-1-2.jpg' %}" alt="">
+                </div>
+                <div class="news-about">
+                    <div class="news-about-icon">
+                        <p><span><i class="fa-solid fa-tag"></i> Apartment</span></p>
+                        <p><span><i class="fa-regular fa-user admin"></i> by Admin</span></p>
+                    </div>
+                    <h3>which healthy food growth strategies required</h3>
+                    <div class="read-more py-2">
+                        <a href="#" class="text-secondary ">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 news-about-block">
+                <div class="news-images">
+                    <img src="{% static '/images/news-1-3.jpg' %}" alt="">
+                </div>
+                <div class="news-about">
+                    <div class="news-about-icon">
+                        <p><span><i class="fa-solid fa-tag"></i> Apartment</span></p>
+                        <p><span><i class="fa-regular fa-user admin"></i> by Admin</span></p>
+                    </div>
+                    <h3>which healthy food growth strategies required</h3>
+                    <div class="read-more py-2">
+                        <a href="#" class="text-secondary ">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="row subscribe-box m-0 p-0">
             <div class="col-md-12 d-flex">
                 <div class="col-md-6 px-5">
                     <div class="icon-folder d-flex align-items-center">
@@ -325,63 +389,84 @@
                 </div>
             </div>
         </div> -->
-    </section>
-
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
-        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</section>
 
 
-    <script type="text/javascript">
-        $('#rotate').slick({
-            dots: true,
-            arrow: false,
-            infinite: true,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        infinite: true,
-                        dots: true,
-                        arrow: false
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        arrow: false
 
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrow: false
-                    }
+
+<script>jQuery(function ($) {
+
+        // Function which adds the 'animated' class to any '.animatable' in view
+        var doAnimations = function () {
+
+            // Calc current offset and get all animatables
+            var offset = $(window).scrollTop() + $(window).height(),
+                $animatables = $('.animatable');
+
+            // Unbind scroll handler if we have no animatables
+            if ($animatables.length == 0) {
+                $(window).off('scroll', doAnimations);
+            }
+
+            // Check all animatables and animate them if necessary
+            $animatables.each(function (i) {
+                var $animatable = $(this);
+                if (($animatable.offset().top + $animatable.height() - 300) < offset) {
+                    $animatable.removeClass('animatable').addClass('animated');
                 }
-                // You can unslick at a given breakpoint now by adding: 
-                // settings: "unslick" 
-                // instead of a settings object 
-            ]
-        }); 
-    </script>
-    <!--------------end------------->
+            });
+
+        };
+
+        // Hook doAnimations on scroll, and trigger a scroll
+        $(window).on('scroll', doAnimations);
+        $(window).trigger('scroll');
+
+    });</script>
+
+<script type="text/javascript">
+    $('#rotate').slick({
+        dots: true,
+        arrow: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true,
+                    arrow: false
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    arrow: false
+
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrow: false
+                }
+            }
+            // You can unslick at a given breakpoint now by adding: 
+            // settings: "unslick" 
+            // instead of a settings object 
+        ]
+    }); 
+</script>
+<!--------------end------------->
 {% endblock %}

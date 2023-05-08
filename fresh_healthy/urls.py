@@ -35,7 +35,7 @@ urlpatterns = [
     path('contact-user',contact.contactUser,name="contact-user"),
     path('catalog/<slug:url>',catalog.category_details,name="catalog"),
     path('product/<slug:url>',catalog.product_details,name="catalog"),
-
+    path('faq',views.faq,name="faq"),
     path('shopping/',catalog.shopping,name="shop"),
     path('cart/add/<int:product_id>', cart.cart_add, name='cart_add'),
     path('cart/remove/<int:product_id>', cart.cart_remove, name='cart_remove'),
@@ -46,4 +46,7 @@ urlpatterns = [
     path('product',views.product,name="product"),
     path('about',views.about,name="about"),
     path('team',views.team,name="team"),
+    path('blog',views.blog,name="blog"),
+    path('terms',views.terms,name="terms"),
+    path('privacy',views.privacy,name="privacy"),
 ]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
