@@ -115,14 +115,14 @@
                 {% endfor %}
             </div>
             <div class="row py-5 categorie-card">
-                <div class="col-md-6 catergorie-card-image1 animated fadeinleft">
+                <div class="col-md-6 catergorie-card-image1 animatable fadeinleft">
                     <h6>100% organic</h6>
                     <h2>quality organic <br> food store</h2>
                     <div class="categories-card-button">
                         <a href="{% url 'shop' %}" class="btn btn-secondary">shop now</a>
                     </div>
                 </div>
-                <div class="col-md-6 catergorie-card-image2 animated fadeinright">
+                <div class="col-md-6 catergorie-card-image2 animatable fadeinright">
                     <h6>100% organic</h6>
                     <h2>healthy products <br> everyday</h2>
                     <div class="categories-card-button">
@@ -426,7 +426,7 @@
 
 <script type="text/javascript">
     $('#rotate').slick({
-        dots: true,
+        dots: false,
         arrow: false,
         infinite: true,
         autoplay: true,

@@ -45,8 +45,8 @@
     {% endfor%}
 
 </div>
-
-<div class="col-md-12 main-block p-0 m-0" id="rotate">
+<div class="container">
+    <div class="col-md-12 main-block my-5 " id="rotate">
 
         {% for shopping in product %}
 
@@ -66,7 +66,7 @@
                                 <span class="new">₹{{shopping.sellingprice}}</span>
                                 <span class="old text-decoration-line-through ">₹{{shopping.mrp}}</span>
                             </div>
-                                <!-- <div class="product-rating d-flex align-center gap-1">
+                            <!-- <div class="product-rating d-flex align-center gap-1">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -91,9 +91,10 @@
                 </div>
             </div>
         </div>
-         {%endif%}
+        {%endif%}
         {% endfor%}
     </div>
+</div>
 
 
 

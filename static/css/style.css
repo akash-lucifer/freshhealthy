@@ -196,11 +196,10 @@ form .text h3 a:hover{text-decoration: underline !important;}
 .categorie .row-cols-1{margin-top: 4rem;}
 .categorie .col-md-3 .card{text-align: center;border: none;background: #bbbbbb39;}
 .categorie .col-md-3 .card a{border: none;opacity: 0;visibility: hidden;transition:.3s;}
-.categorie .col-md-3 .card:hover a{opacity:1;visibility:visible;transition: .8s; color: #fff;}
+.categorie .col-md-3 .card:hover a{opacity:1;visibility:visible;transition: .5s; color: #fff;}
 .categorie .col-md-3 .card .arrow-1{background: #4A9E27;}
-.categorie .col-md-3 .card .arrow-2{background: #e49b0a;}
-.categorie .col-md-3 .card .arrow-3{background: #0594bc;}
-.categorie .col-md-3 .card .arrow-4{background: #c00505;}
+.categorie .col-md-3 .card .arrow-1:hover{background:#f7a80a;}
+
 .categorie .col-md-3 .card a:hover{display: block;transition: .8s; color: #fff;}
 .categorie .col-md-3 .card img{text-align: center;border-radius: 50%;height: 200px;width: 200px;margin: -70px auto;}
 .categorie .col-md-3 .card .card-body{margin: 0 auto;margin-top: 70px;}
@@ -329,14 +328,14 @@ form .text h3 a:hover{text-decoration: underline !important;}
 /* map-area */
 .map-area{margin: 2rem 0rem;margin-bottom: 4rem;}
 .map-area .contact-map iframe{width: 100%;height: 500px;margin-top: 3rem;}
-.contact-info .col-md-3 {font-size: 16px;line-height: 20px; color: #787878;padding: 0;margin: 0;text-transform: capitalize;}
+.contact-info .col-md-3 {font-size: 16px;line-height: 20px; color: #787878;margin: 0;text-transform: capitalize;}
 .contact-info .contact-about a{color: #153b03;text-decoration: none;font-size: 15px;font-weight: 600;}
 .contact-info .contact-about a:hover{color: #e49b0a;transition: .3s;}
 .contact-info .col-md-3 .contact-links{display: flex;}
 .contact-info .col-md-3 .contact-links a{ padding: 0px 5px !important;}
 .contact-info .col-md-3 .contact-links a i{color: #153b03 !important;padding: 10px;border-radius: 50%; font-size: 20px;background: #d5d5d5;}
 .contact-info .col-md-3 .contact-links a i:hover{color: #fff !important;background: #e49b0a;transition: .5s;}
-/* delivery form */
+/* ---------------------------------------------delivery form------------------------------------------------ */
 
 .form-container {max-width: 800px;padding: 20px;background-color: white;}
 .form-container h2 {text-align: center;font-size: 28px;margin: 0;}
@@ -347,6 +346,14 @@ form .text h3 a:hover{text-decoration: underline !important;}
 .form-container textarea:focus{outline: 1px solid #1900ff;}
 .form-container .btn {cursor: pointer;float: right;margin-left: 10px;}
 .form-container::after {content: "";clear: both;display: table;}
+
+
+
+
+
+
+
+
 /* Responsive layout - make the form container smaller on screens that are less than 600px wide */
 @media screen and (max-width: 600px) {
   .form-container {
@@ -549,8 +556,139 @@ form .text h3 a:hover{text-decoration: underline !important;}
 
 
 /* ------------------------------------------------Responsive---------------------------------------------- */
+@media screen and (min-width:991px) and (max-width:1340px){
+/* navbar */
+/* #navbarNavDropdown {gap:10px !important;position:absolute;top:85%;z-index:10;right:10px;box-shadow: 0 2px 6px #00000026;} */
+#navbarNavDropdown .navbar-nav {width:100%;gap:0rem;}
+#navbarNavDropdown .navbar-nav li a {padding: 8px 15px;
+border-bottom: 1px solid #ddd;font-size:13px;font-weight:600;}
+.login-buttons{width:100%;}
+.navigation .login-buttons {justify-content: center;gap:10px;padding-bottom:13px;margin-top: 10px;}
+.navigation .login-buttons .shop-now {border-radius:5px;padding:10px 30px;line-height:initial;font-size:13px;font-weight:bold;}
+button{display: block;}
 
-@media screen and (min-width:768px) and (max-width:1320px){
+
+.h1{font-size: 40px !important;}
+.carousel{height: 500px !important;}
+
+
+/* header */
+
+.header-block{position: relative;}
+.header-block .navbar-toggler{position: absolute;right:10px;}
+/* banner */
+.banner-heading{top: 18%;left: 7%;}
+/* service */
+.service .service-img{width: 100%;}
+.service .service-img img{width: 100%;}
+.service .service-heading{width: 50%;}
+.service .service-heading h1 {font-size: 28px;padding: 0;}
+.service .card{font-size: 9px;margin: 2rem 0rem;}
+.service .service-heading h2{font-size: 24px;padding: 10px 0px;}
+.service .discover-more h3{font-size: 20px;}
+.service .discover-more img{width: 40%;}
+
+/* categorie  */
+.categorie_block{padding: 0 !important;}
+.categorie .heading{margin: 0;}
+.categorie .col-md-3{width: 50%;margin-bottom: 8rem;}
+.categorie .heading h2{font-size: 34px;}
+.categorie .card-bottom{margin-top: 8rem;}
+.categorie .col-md-3 .swipe-more{right: 8.5rem;}
+.categorie .categorie-card .catergorie-card-image1{width: 100%;}
+.categorie .categorie-card h2{font-size: 30px;}
+.categorie .categorie-card .catergorie-card-image2{width: 100%;}
+/* .hot-product */
+.hot-product{padding: 0;}
+.hot-product .heading h2{font-size: 34px;}
+.hot-product .heading{margin: 0;}
+/* why_choose_us  */
+.why_choose_us .col-md-6{width: 100%;}
+.why_choose_us .col-md-6 h2{font-size: 30px;}
+.why_choose_us .col-md-6 .col-md-12 .card h5{font-size: 15px;}
+/* .our-team-block */
+.our-team-block{padding-top: 5rem;}
+.our-team-block .our-team .col-md-4{width: 90%;margin-bottom: 5rem;}
+.our-team-block .our-team .col-md-4 .team-social-links{left: 9rem;}
+.our-team-block .our-team .col-md-4 .team-name{right: 16rem;bottom: -5rem;}
+/* .testimonial */
+.testimonial{padding: 1rem 0rem;}
+.testimonial .testimonial-heading{width: 100%;}
+.testimonial .col-md-6{width: 100%;}
+.testimonial .feedback .feedback-1{top: 24rem;left: 2rem;width: 56%;}
+.testimonial .feedback .feedback-1 .client-image h6{margin: 0rem 1rem;}
+
+/* news */
+.news-letter .news-block{gap: 7rem;}
+.news-letter .news-block .col-md-4{width: 100%;}
+.news-letter .col-md-4 .news-about{width: 86%;margin-top: -6rem;}
+/* .subscribe-box */
+.subscribe-box{padding: 3rem 0rem !important;}
+.subscribe-box .col-md-6{padding:0px 0px !important;}
+.subscribe-box .col-md-6 h2{font-size: 27px;}
+.subscribe-box .col-md-6 .icon-folder i{font-size: 50px;}
+.subscribe-box .col-md-6 input{width: 90%;}
+/* .footer-block  */
+.footer-block .footer-main .col-md-3{width: 50%;margin-bottom: 2rem;}
+.footer-block .links{margin-top: 2rem;}
+.footer-block .col-md-3 .footer-img img{width: 35%;}
+
+
+/*-------------------------------------------------------- aboutus page-------------------------------------------- */
+.know-us .col-md-6{width: 100%;}
+.know-us .col-md-6 img{width: 100%;height: 400px;object-fit: cover;}
+.play_video .col-md-12 .video-icon a i{font-size: 4rem;}
+.play_video .col-md-12 h1{font-size: 40px;}
+.play_video{height: 350px;}
+/* ---------------------------------------------------------team page--------------------------------------------- */
+.farmers .farmer-block .col-md-4 .farmer-about{padding: 1rem 0rem;}
+.farmers .farmer-block .col-md-4 .farmer-about .farmer-name h5{font-size: 20px;}
+.farmers .farmer-block .col-md-4 .farmer-about .farmer-links a{padding: 0px 3px;}
+.farmers .farmer-block .col-md-4 .farmer-about .farmer-links a i{font-size: 15px;}
+/* -----------------------------------------------------------contact us----------------------------------------- */
+.contact-form .contact-form-heading h2{font-size: 30px;padding-bottom: 2rem;}
+.contact-form .form-block{width: 90%;}
+.map-area .contact-map iframe{width: 100%;height: 300px;margin-top: 3rem;}
+.contact-info .col-md-3{font-size: 15px;}
+.contact-info .contact-about a{font-size: 13px;}
+.contact-info .col-md-3 .contact-links a i{font-size: 15px;}
+/* -----------------------------------------------------------product-list page---------------------------------------- */
+.product-block .col-md-3{width: 100%;}
+.product-block .col-md-9{width: 100%;}
+.product-block .side-bar{background: #dddddd73;}
+.product-block .side-bar .card{max-width: 100% !important;}
+.product-block .side-bar .row{background: #dddddd73;}
+.product-block .col-md-3 .card .col-md-8{background: none;}
+.product-block .col-md-3 .card .col-md-4{width: 15%;}
+
+
+/*------------------------------------------------------ blog page-------------------------------------------------------------- */
+.blog-main .col-md-8 .blog-body .blog-detail{font-size: 13px;}
+.blog-main .blog{gap: 10px;}
+.blog-main .col-md-8{width: 60%;}
+.blog-main .col-md-3{width: 35%;}
+.blog-main .col-md-3 .blog_upcomig{padding: 5px;margin: 1rem 0rem;height: 60px;}
+.blog-main .col-md-8 .blog-body .col-md-12 h2{font-size: 28px;}
+.blog-main .col-md-8 .blog-body .comment .comment-detail{font-size: 13px;margin-bottom: 1rem;}
+.blog-main .col-md-8 .blog-body .comment .comment-image{width: 40%;}
+.blog-main .col-md-8 .blog-body .comment{padding: 15px 0px;}
+.blog-main .col-md-8 .blog-body form h2{font-size: 28px;}
+.blog-main .col-md-8 .blog-body form input{font-size: 12px;}
+.blog-main .col-md-8 .blog-body form textarea{font-size: 12px;max-height: 90px;}
+
+/*--------------------------------------------------------------- terms----------------------------------------- */
+.terms-conditons{font-size: 10px;}
+/* --------------------------------------------------------------privacy policy -------------------------------- */
+.privacy-policy{font-size: 10px;}
+
+
+}
+
+
+
+
+
+@media screen and (min-width:768px) and (max-width:990px){
   
   .h1{font-size: 40px !important;}
   .carousel{height: 500px !important;}
@@ -563,21 +701,33 @@ form .text h3 a:hover{text-decoration: underline !important;}
   /* banner */
   .banner-heading{top: 18%;left: 7%;}
   /* service */
-  /* .service .service-img{width: 100%;} */
-  /* .service .service-heading{width: 100%;} */
+  .service .service-img{width: 100%;}
+  .service .service-img img{width: 100%;}
+  .service .service-heading{width: 50%;}
+  .service .service-heading h1 {font-size: 28px;padding: 0;}
+  .service .card{font-size: 9px;margin: 2rem 0rem;}
+  .service .service-heading h2{font-size: 24px;padding: 10px 0px;}
+  .service .discover-more h3{font-size: 20px;}
+  .service .discover-more img{width: 40%;}
   
   /* categorie  */
+  .categorie_block{padding: 0 !important;}
   .categorie .heading{margin: 0;}
-  .categorie .col-md-3{width: 50%;}
+  .categorie .col-md-3{width: 50%;margin-bottom: 8rem;}
+  .categorie .heading h2{font-size: 34px;}
   .categorie .card-bottom{margin-top: 8rem;}
   .categorie .col-md-3 .swipe-more{right: 8.5rem;}
   .categorie .categorie-card .catergorie-card-image1{width: 100%;}
+  .categorie .categorie-card h2{font-size: 30px;}
   .categorie .categorie-card .catergorie-card-image2{width: 100%;}
   /* .hot-product */
   .hot-product{padding: 0;}
+  .hot-product .heading h2{font-size: 34px;}
   .hot-product .heading{margin: 0;}
   /* why_choose_us  */
   .why_choose_us .col-md-6{width: 100%;}
+  .why_choose_us .col-md-6 h2{font-size: 30px;}
+  .why_choose_us .col-md-6 .col-md-12 .card h5{font-size: 15px;}
   /* .our-team-block */
   .our-team-block{padding-top: 5rem;}
   .our-team-block .our-team .col-md-4{width: 90%;margin-bottom: 5rem;}
@@ -597,6 +747,8 @@ form .text h3 a:hover{text-decoration: underline !important;}
   /* .subscribe-box */
   .subscribe-box{padding: 3rem 0rem !important;}
   .subscribe-box .col-md-6{padding:0px 0px !important;}
+  .subscribe-box .col-md-6 h2{font-size: 27px;}
+  .subscribe-box .col-md-6 .icon-folder i{font-size: 50px;}
   .subscribe-box .col-md-6 input{width: 90%;}
   /* .footer-block  */
   .footer-block .footer-main .col-md-3{width: 50%;margin-bottom: 2rem;}
@@ -616,15 +768,20 @@ form .text h3 a:hover{text-decoration: underline !important;}
 .farmers .farmer-block .col-md-4 .farmer-about .farmer-links a{padding: 0px 3px;}
 .farmers .farmer-block .col-md-4 .farmer-about .farmer-links a i{font-size: 15px;}
 /* -----------------------------------------------------------contact us----------------------------------------- */
-.contact-form .contact-form-heading h2{font-size: 40px;}
+.contact-form .contact-form-heading h2{font-size: 30px;padding-bottom: 2rem;}
 .contact-form .form-block{width: 90%;}
 .map-area .contact-map iframe{width: 100%;height: 300px;margin-top: 3rem;}
 .contact-info .col-md-3{font-size: 15px;}
-.contact-info .contact-about a{font-size: 14px;}
-/* -----------------------------------------------------------product-list---------------------------------------- */
+.contact-info .contact-about a{font-size: 13px;}
+.contact-info .col-md-3 .contact-links a i{font-size: 15px;}
+/* -----------------------------------------------------------product-list page---------------------------------------- */
 .product-block .col-md-3{width: 100%;}
+.product-block .col-md-9{width: 100%;}
+.product-block .side-bar{background: #dddddd73;}
 .product-block .side-bar .card{max-width: 100% !important;}
-.product-block .side-bar .row{background: #ffffff0a;}
+.product-block .side-bar .row{background: #dddddd73;}
+.product-block .col-md-3 .card .col-md-8{background: none;}
+.product-block .col-md-3 .card .col-md-4{width: 15%;}
 
 /* navbar */
 #navbarNavDropdown {background:#fff;width:250px;gap:10px !important;position:absolute;top:85%;z-index:10;right:10px;box-shadow: 0 2px 6px #00000026;}
@@ -635,7 +792,23 @@ border-bottom: 1px solid #ddd;font-size:13px;font-weight:600;}
 .navigation .login-buttons {justify-content: center;gap:10px;padding-bottom:13px;margin-top: 10px;}
 .navigation .login-buttons .shop-now {border-radius:5px;padding:10px 30px;line-height:initial;font-size:13px;font-weight:bold;}
 
+/*------------------------------------------------------ blog page-------------------------------------------------------------- */
+.blog-main .col-md-8 .blog-body .blog-detail{font-size: 13px;}
+.blog-main .blog{gap: 10px;}
+.blog-main .col-md-8{width: 60%;}
+.blog-main .col-md-3{width: 35%;}
+.blog-main .col-md-3 .blog_upcomig{padding: 5px;margin: 1rem 0rem;height: 60px;}
+.blog-main .col-md-8 .blog-body .col-md-12 h2{font-size: 28px;}
+.blog-main .col-md-8 .blog-body .comment .comment-detail{font-size: 13px;margin-bottom: 1rem;}
+.blog-main .col-md-8 .blog-body .comment .comment-image{width: 40%;}
+.blog-main .col-md-8 .blog-body .comment{padding: 15px 0px;}
+.blog-main .col-md-8 .blog-body form h2{font-size: 28px;}
+.blog-main .col-md-8 .blog-body form input{font-size: 12px;}
+.blog-main .col-md-8 .blog-body form textarea{font-size: 12px;max-height: 90px;}
 
-
+/*--------------------------------------------------------------- terms----------------------------------------- */
+.terms-conditons{font-size: 10px;}
+/* --------------------------------------------------------------privacy policy -------------------------------- */
+.privacy-policy{font-size: 10px;}
 
 }
